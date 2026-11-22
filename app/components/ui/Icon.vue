@@ -1,0 +1,62 @@
+<script setup lang="ts">
+import {
+  PhFirstAid,
+  PhGraduationCap,
+  PhPackage,
+  PhMagnifyingGlass,
+  PhCaretRight,
+  PhCaretLeft,
+  PhCheckCircle,
+  PhArrowClockwise,
+  PhPaperPlaneTilt,
+  PhArrowSquareOut,
+  PhX,
+  PhCircleNotch,
+  PhKeyboard,
+  PhHouse,
+  PhUsers,
+  PhGear,
+  PhListChecks,
+  PhChatText,
+  PhDatabase,
+  PhBookOpen,
+  PhWarningCircle,
+  PhArrowLeft,
+  PhArrowsClockwise,
+  PhChatCircleDots,
+  PhSlidersHorizontal,
+} from "@phosphor-icons/vue";
+const icons = {
+  pharmacy: PhFirstAid,
+  education: PhGraduationCap,
+  package: PhPackage,
+  search: PhMagnifyingGlass,
+  right: PhCaretRight,
+  left: PhCaretLeft,
+  success: PhCheckCircle,
+  refresh: PhArrowClockwise,
+  send: PhPaperPlaneTilt,
+  external: PhArrowSquareOut,
+  close: PhX,
+  loading: PhCircleNotch,
+  keyboard: PhKeyboard,
+  home: PhHouse,
+  users: PhUsers,
+  settings: PhGear,
+  queue: PhListChecks,
+  sms: PhChatText,
+  chat: PhChatCircleDots,
+  database: PhDatabase,
+  book: PhBookOpen,
+  warning: PhWarningCircle,
+  back: PhArrowLeft,
+  sync: PhArrowsClockwise,
+  sliders: PhSlidersHorizontal,
+};
+withDefaults(defineProps<{ name: keyof typeof icons; size?: number }>(), {
+  size: 22,
+});
+</script>
+<template>
+  <component :is="icons[name]" :size="size" aria-hidden="true" />
+</template>
