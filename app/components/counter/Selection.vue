@@ -100,7 +100,9 @@ useShortcuts((event, editing) => {
             :value="item.id"
           /><span
             ><strong>{{ item.name }}</strong
-            ><small>{{ item.meta }}</small></span
+            ><small :class="{ 'education-summary': !stock }">{{
+              item.meta
+            }}</small></span
           >
         </label>
       </div>

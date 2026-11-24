@@ -11,6 +11,9 @@ export default defineNuxtConfig({
     head: {
       title: "همیار داروخانه",
       htmlAttrs: { lang: "fa", dir: "rtl" },
+      link: [
+        { rel: "icon", type: "image/png", href: "/pharmacy-logo.png" },
+      ],
       meta: [
         { name: "description", content: "پیشخوان خدمات مشتریان داروخانه" },
       ],

@@ -82,7 +82,7 @@ const columns = [
           formatDate(row.created_at)
         }}</template
         ><template #actions="{ row }"
-          ><NuxtLink class="text-link" :to="`/admin/sms/${row.id}`"
+          ><NuxtLink class="button button-secondary" :to="`/admin/sms/${row.id}`"
             >مشاهده جزئیات</NuxtLink
           ></template
         >

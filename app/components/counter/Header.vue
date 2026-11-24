@@ -5,7 +5,7 @@ defineEmits<{ back: [] }>();
 <template>
   <header class="counter-header" :class="{ 'home-header': !title }">
     <template v-if="!title"
-      ><UiIcon name="pharmacy" :size="40" />
+      ><AppLogo />
       <div>
         <strong>همیار داروخانه</strong>
         <p>پیشخوان خدمات مشتریان</p>

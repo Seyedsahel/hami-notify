@@ -7,9 +7,9 @@ const links = [
     icon: "package" as const,
   },
   { to: "/admin/sms", name: "گزارش پیامک‌ها", icon: "chat" as const },
-  { to: "/admin/arya", name: "همگام‌سازی آریا", icon: "sync" as const },
   { to: "/admin/customers", name: "مشتریان", icon: "users" as const },
   { to: "/admin/education", name: "آموزش‌ها", icon: "education" as const },
+  { to: "/admin/arya", name: "همگام‌سازی آریا", icon: "sync" as const },
   {
     to: "/admin/sms-settings",
     name: "تنظیمات پیامک",
@@ -22,7 +22,7 @@ const links = [
   <header class="dashboard-header">
     <div class="dashboard-topbar">
       <NuxtLink class="dashboard-brand" to="/admin">
-        <UiIcon name="pharmacy" :size="40" />
+        <AppLogo />
         <div>
           <strong>همیار داروخانه</strong>
           <p>مدیریت خدمات مشتریان</p>

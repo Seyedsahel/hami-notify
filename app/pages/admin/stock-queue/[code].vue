@@ -181,11 +181,28 @@ const columns = [
             >{{ faDigits(row.phone) }}</NuxtLink
           ></template
         >
-        <template #category="{ row }">{{
-          categoryLabels[row.category]
-        }}</template><template #priority="{ row }">{{
-          priorityLabels[row.priority]
-        }}</template>
+        <template #category="{ row }">
+          <span
+            class="badge"
+            :class="{
+              'badge-pink': row.category === 'cosmetics',
+              'badge-green': row.category === 'medicines',
+              'badge-blue': row.category === 'supplements',
+            }"
+            >{{ categoryLabels[row.category] }}</span
+          >
+        </template>
+        <template #priority="{ row }">
+          <span
+            class="badge"
+            :class="{
+              'badge-red': row.priority === 'urgent',
+              'badge-orange': row.priority === 'high',
+              'badge-yellow': row.priority === 'normal',
+            }"
+            >{{ priorityLabels[row.priority] }}</span
+          >
+        </template>
         <template #status="{ row }"
           ><span
             class="badge"

@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import {
-  PhFirstAid,
   PhGraduationCap,
   PhPackage,
   PhMagnifyingGlass,
@@ -27,7 +26,6 @@ import {
   PhSlidersHorizontal,
 } from "@phosphor-icons/vue";
 const icons = {
-  pharmacy: PhFirstAid,
   education: PhGraduationCap,
   package: PhPackage,
   search: PhMagnifyingGlass,

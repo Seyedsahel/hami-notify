@@ -49,7 +49,7 @@ const { reload } = useListLoader(
             <small class="muted">{{ formatDate(item.published_at) }}</small>
             <a
               v-if="publicLink(item.url)"
-              class="text-link"
+              class="button button-secondary"
               :href="publicLink(item.url)"
               target="_blank"
               rel="noopener noreferrer"

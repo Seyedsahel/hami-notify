@@ -132,7 +132,7 @@ useShortcuts((event) => {
         step = 1;
         selectedId = '';
       "
-      ><NuxtLink class="text-link small" :to="`/admin/sms/${result.id}`"
+      ><NuxtLink class="button button-secondary" :to="`/admin/sms/${result.id}`"
         >جزئیات ارسال و تحویل</NuxtLink
       ></CounterReceipt
     >

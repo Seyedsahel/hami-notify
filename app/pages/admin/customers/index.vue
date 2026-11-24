@@ -49,13 +49,14 @@ const columns = [
       :error="store.error?.message"
       @retry="reload"
       ><UiTable
+        class="customer-table"
         :rows="store.page?.items || []"
         :columns="columns"
         :row-key="(row) => row.phone"
         caption="فهرست مشتریان"
         ><template #phone="{ row }"
           ><NuxtLink
-            class="text-link ltr"
+            class="text-link ltr customer-row-link"
             :to="`/admin/customers/${row.phone}`"
             >{{ faDigits(row.phone) }}</NuxtLink
           ></template
@@ -79,3 +80,21 @@ const columns = [
     />
   </div>
 </template>
+
+<style scoped>
+.customer-table :deep(tbody tr) {
+  position: relative;
+}
+.customer-row-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+.customer-table :deep(tbody tr:has(.customer-row-link):hover) {
+  background: var(--selected);
+}
+.customer-table :deep(tbody tr:focus-within) {
+  outline: 2px solid var(--forest);
+  outline-offset: -2px;
+}
+</style>

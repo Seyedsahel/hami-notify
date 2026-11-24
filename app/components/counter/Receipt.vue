@@ -39,7 +39,7 @@ onMounted(() => receipt.value?.focus());
       <UiButton @click="$emit('next')">ثبت برای مشتری بعدی</UiButton
       ><UiButton variant="secondary" @click="$emit('choose')"
         >انتخاب مورد دیگر</UiButton
-      ><NuxtLink class="text-link small" to="/">بازگشت به خانه</NuxtLink>
+      ><NuxtLink class="button button-secondary" to="/">بازگشت به خانه</NuxtLink>
     </div>
   </div>
 </template>

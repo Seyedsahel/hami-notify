@@ -65,12 +65,12 @@ const columns = [
     </div>
     <p v-if="options.error" class="error-panel">
       دریافت دسته‌بندی‌ها انجام نشد.
-      <button
-        class="text-link"
+      <UiButton
+        variant="secondary"
         @click="options.fetchOptions(true).catch(() => {})"
       >
         تلاش مجدد
-      </button>
+      </UiButton>
     </p>
     <UiAsyncState
       :loading="store.loading"
@@ -95,7 +95,7 @@ const columns = [
         }}</template>
         <template #actions="{ row }"
           ><NuxtLink
-            class="text-link"
+            class="button button-secondary"
             :to="`/admin/stock-queue/${encodeURIComponent(row.code)}`"
             >بررسی درخواست‌ها</NuxtLink
           ></template

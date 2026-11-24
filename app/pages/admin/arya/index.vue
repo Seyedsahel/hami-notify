@@ -72,7 +72,7 @@ const columns = [
           formatDate(row.received_at)
         }}</template
         ><template #actions="{ row }"
-          ><NuxtLink class="text-link" :to="`/admin/arya/${row.request_id}`"
+          ><NuxtLink class="button button-secondary" :to="`/admin/arya/${row.request_id}`"
             >مشاهده رسید</NuxtLink
           ></template
         ></UiTable
